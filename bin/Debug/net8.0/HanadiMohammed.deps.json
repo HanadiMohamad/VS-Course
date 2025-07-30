@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HanadiMohammed/1.0.0": {
+        "runtime": {
+          "HanadiMohammed.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HanadiMohammed/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

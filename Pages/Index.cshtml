@@ -1,0 +1,86 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyMusicSite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @@keyframes pulse {
+            0% { color: #00ffff; transform: scale(1); }
+            50% { color: #ff00ff; transform: scale(1.1); }
+            100% { color: #00ffff; transform: scale(1); }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 0 auto;
+            border: 4px solid #fff;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header id="animatedHeader">🎵 My Favorite Song 🎵</header>
+
+    <div class="video-container">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/hT_nvWreIhg?si=NTirAYvfXcC44iGH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        &copy; 2025 MyMusicSite
+    </footer>
+
+    <script>
+        // Optional enhancement: add subtle JavaScript animation to header (color shift)
+        const header = document.getElementById('animatedHeader');
+        let hue = 0;
+
+        function animateHue() {
+            hue = (hue + 1) % 360;
+            header.style.color = `hsl(${hue}, 100%, 70%)`;
+            requestAnimationFrame(animateHue);
+        }
+
+        animateHue();
+    </script>
+</body>
+</html>
